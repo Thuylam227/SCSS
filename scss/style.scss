@@ -1,0 +1,1067 @@
+$shadow : rgba(120, 120, 120, 0.5);
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* For desktop: */
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(248, 248, 248);
+    font-size: larger;
+
+    .text-left {
+        width: 10%;
+
+        ul {
+            display: flex;
+            gap: 10px;
+            padding-bottom: 20px;
+
+            li {
+                background-color: rgb(70, 68, 68);
+                list-style: none;
+
+                padding: 8px;
+                border-radius: 100%;
+
+                a {
+                    text-decoration: none;
+                    color: aliceblue;
+
+                    &:hover {
+                        color: orangered;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .text-right {
+        width: 30%;
+
+        .mb-0 {
+            display: flex;
+            gap: 30px;
+
+
+            span {
+                a {
+                    text-decoration: none;
+                    color: rgb(77, 77, 77);
+                    font-weight: 100;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+                }
+            }
+        }
+    }
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+
+
+    div {
+        h1 {
+            font-size: 40px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+    }
+
+    div {
+        nav {
+            ul {
+                display: flex;
+                gap: 50px;
+                list-style: none;
+                flex-wrap: wrap;
+                font-size: 20px;
+                margin-top: 40px;
+            }
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: smaller;
+
+                    &:hover {
+                        color: orangered;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin background {
+    background: rgba(0, 0, 0, 0.33) url(/photos/hero_2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    max-width: 100%;
+
+}
+
+.shopp {
+    @include background;
+
+    .shop {
+        width: 70%;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-bottom: 150px;
+
+        h1 {
+            font-size: 80px;
+            color: white;
+        }
+
+        .shop1 {
+            font-size: 20px;
+            width: 80%;
+            color: rgb(246, 244, 244);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 10px;
+        }
+
+        .shop2 {
+            button {
+                font-size: 12px;
+                padding: 20px;
+                border: white solid 2px;
+                width: 200px;
+            }
+
+        }
+    }
+}
+
+.shop3 {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+
+    &:hover {
+        background-color: white;
+        background-size: cover;
+        background-attachment: fixed;
+        color: black;
+    }
+}
+
+.shop4 {
+    background-color: white;
+    padding-left: 5px;
+    font-weight: bold;
+
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.2);
+        color: white;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+@mixin text-center {
+    text-align: center;
+    line-height: 5px;
+
+    h3 {
+        color: $shadow ;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        margin: 0 30%;
+        line-height: 20px;
+        font-size: 18px;
+        color: rgb(141, 140, 140);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        word-spacing: 5%;
+    }
+}
+
+.text-center-one {
+    margin-top: 100px;
+    @include text-center;
+}
+
+.img-fluid {
+    max-width: 350px;
+}
+
+@mixin buton {
+    padding: 10px;
+    padding-right: 10px;
+    border: white solid 2px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: smaller;
+    font-weight: bold;
+
+    &:hover {
+        background-color: white;
+        color: black;
+        border: black solid 2px;
+    }
+}
+
+@mixin button {
+    font-size: smaller;
+    padding: 10px;
+    border: black solid 2px;
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+
+    &:hover {
+        background-color: black;
+        color: white;
+        border: white solid 2px;
+    }
+}
+
+
+.img {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-right: 50px;
+
+    .product-item {
+        margin-bottom: 50px;
+
+        figure {
+            margin-top: 50px;
+
+            &:hover {
+                border: orangered solid 2px;
+                width: max-content;
+            }
+        }
+    }
+
+    .px-4 {
+        h3 {
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 100;
+
+                &:hover {
+                    color: orangered;
+                }
+            }
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: repeat(2, 20%);
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+            }
+
+            .img1 {
+                @include buton;
+            }
+
+        }
+
+        .img2 {
+            @include button;
+        }
+
+
+    }
+
+    p {
+        padding: 20px 18px 10px 30px;
+        padding-left: 80px;
+        color: rgb(91, 91, 91);
+        margin-top: 10px;
+
+
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .img {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.get-notification {
+    @extend .shopp;
+    height: 350px;
+
+    .justify-content-center {
+        form {
+            text-align: center;
+            padding-top: 70px;
+            padding-bottom: 150px;
+
+            h2 {
+                color: white;
+                font-size: 33px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: lighter;
+            }
+
+            .d-flex {
+                .form-control {
+                    height: auto;
+                    width: 45%;
+                    font-size: 15px;
+                    font-style: italic;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 14px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    border: white solid 2px;
+                    border-right: white solid 4px;
+
+                }
+
+                .btn {
+                    padding-top: 8px;
+                    padding-bottom: 10px;
+                    width: 100px;
+                    border: white solid 3px;
+                    padding-left: 10px;
+                    padding-right: 12px;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: bold;
+                    @extend .shop3;
+                }
+            }
+
+            p {
+                color: white;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: large;
+
+            }
+        }
+    }
+
+}
+
+@mixin text {
+    line-height: 20px;
+    font-size: 17px;
+    color: rgb(141, 140, 140);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing: 2px;
+}
+
+.About-area {
+    background-color: rgba(167, 165, 165, 0.1);
+    height:auto;
+   
+    .About-content-center {
+        .text-center {
+            @extend .text-center-one;
+            padding: 60px;
+        }
+    }
+
+    .about-des1 {
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-bottom: 70px;
+        
+
+        .about-1 {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            padding-top: 30px;
+            align-items: center;
+
+            .img-about {
+                height: 100%;
+                padding-left: 70px;
+                width: 550px;
+                padding-bottom: 50px;
+            }
+
+            .product-title_1 {
+                width: 80%;
+                padding-right: 100px;
+                padding-left: 100px;
+                padding-bottom: 150px;
+
+                .text-title {
+                    font-size: 30px;
+                }
+
+                p {
+                    @include text;
+                }
+
+                .price {
+                    @include text;
+                }
+
+                .mr-2 {
+                    color: darkgray;
+                }
+
+                .click {
+                    padding-top: 20px;
+                }
+
+                .white-b {
+                    @include button;
+                    text-decoration: none;
+                }
+
+                .black-b {
+                    @include buton;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .about-des2 {
+        @extend .about-des1;
+
+        .about-2 {
+            @extend .about-1;
+
+            .product-title_2 {
+                @extend .product-title_1;
+
+            }
+
+            .img-about {
+                width: 550px;
+                height: 550px;
+                padding-top: 30px;
+                padding-right: 50px;
+            }
+        }
+    }
+}
+
+.experience-section{
+    .exp-one{
+    display: flex;
+    padding-top: 30px;
+    .img-section {
+        width: 800px;
+        padding: 60px;
+    }
+
+    .content {
+        height: 100%;
+        width: 30%;
+        align-self: center;
+        padding-left: 50px;
+
+        h2 {
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: lighter;
+            color: rgb(190, 193, 196);
+        }
+
+
+        p {
+            @include text;
+            line-height: 25px;
+            padding-bottom: 20px;
+            width: 80%;
+        }
+
+        .black-b {
+            @include buton;
+            text-decoration: none;
+            margin-top: 100px;
+        }
+
+    }
+}
+}
+
+.team-section {
+    .person-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding-left: 60px;
+    }
+
+    .person {
+        width: 80%;
+        text-align: center;
+        border-radius: 3px;
+        justify-content: space-between;
+
+
+        h3 {
+            color: rgb(112, 114, 114);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+        }
+
+        .position {
+            font-size: small;
+            color: rgb(209, 209, 209);
+        }
+
+        .team-script {
+            font-size: 16px;
+            color: rgb(138, 139, 139);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+    }
+
+    .img-team {
+        width: 260px;
+    }
+
+    .text-center {
+        @extend .text-center-one;
+    }
+
+    .ul-social-circle {
+
+        text-decoration: none;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 40px;
+
+        li {
+            font-size: 26px;
+            list-style: none;
+            gap: 5px;
+            padding-left: 10px;
+            border-radius: 100%;
+
+        }
+    }
+}
+
+.special-section {
+    @include background;
+
+    .text-center {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 60px;
+
+        .section-sub-titles {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(144, 148, 148);
+            font-size: medium;
+            word-spacing: 2px;
+        }
+
+        h2,
+        p {
+            color: white;
+        }
+
+        .section-title {
+            font-size: 40px;
+        }
+
+        .mb-5 {
+            font-size: 22px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 200;
+        }
+
+        .shop3 {
+            background: rgba(0, 0, 0, 0.2);
+            border: white solid 2px;
+            color: white;
+            font-weight: bold;
+            margin-top: 30px;
+            padding: 20px;
+            width: 150px;
+
+            &:hover {
+                background-color: white;
+                background-size: cover;
+                background-attachment: fixed;
+                color: black;
+            }
+        }
+
+        .countdown-block {
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+            --blue: #007bff;
+            --indigo: #0d0cb5;
+            --purple: #7971ea;
+            --pink: #e83e8c;
+            --red: #f23a2e;
+            --orange: #ef6c57;
+            --yellow: #f89d13;
+            --green: #8bc34a;
+            --teal: #46ddb0;
+            --cyan: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --primary: #f16821;
+            --secondary: #6c757d;
+            --success: #8bc34a;
+            --info: #17a2b8;
+            --warning: #f89d13;
+            --danger: #f23a2e;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            line-height: 1.7;
+            font-weight: 400;
+            font-size: 1rem;
+            text-align: center !important;
+            box-sizing: border-box;
+            color: #b3b3b3;
+            background: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 7px;
+        }
+
+        .label {
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+            --blue: #007bff;
+            --indigo: #0d0cb5;
+            --purple: #7971ea;
+            --pink: #e83e8c;
+            --red: #f23a2e;
+            --orange: #ef6c57;
+            --yellow: #f89d13;
+            --green: #8bc34a;
+            --teal: #46ddb0;
+            --cyan: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --primary: #f16821;
+            --secondary: #6c757d;
+            --success: #8bc34a;
+            --info: #17a2b8;
+            --warning: #f89d13;
+            --danger: #f23a2e;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            line-height: 1.7;
+            font-weight: 400;
+            text-align: center !important;
+            box-sizing: border-box;
+            font-size: 40px;
+            color: #46ddb0;
+            display: block;
+        }
+    }
+}
+
+.services-section {
+    background-color: rgba(167, 165, 165, 0.1);
+
+    .text-center {
+        @extend .text-center-one;
+        padding: 60px;
+
+        h3 {
+            font-size: 13px;
+            word-spacing: 2px;
+            font-weight: light;
+        }
+
+        h2 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-top: 5px;
+        }
+    }
+
+    .align-items-stretch {
+        display: grid;
+        grid-template-columns: repeat(3, 25%);
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-bottom: 60px;
+    }
+
+    .unit-4 {
+        a {
+            text-decoration: none;
+            color: rgb(232, 101, 53);
+
+            &:hover {
+                color: rgb(182, 82, 46);
+            }
+        }
+
+        font-family: "Muli",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+        text-align: left;
+        line-height: 1.7;
+        color: gray;
+        font-weight: 400;
+        font-size: 1rem;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 1.5rem !important;
+        transition-property: opacity,
+        transform;
+        transition-duration: .8s;
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.testimonials-section {
+    text-align: center;
+
+    .text-center {
+        @extend .text-center-one;
+
+    }
+
+    .img-testimonial {
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    .testimonial {
+        padding-top: 30px;
+        justify-content: space-between;
+
+        blockquote {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 25px;
+            font-style: italic;
+            color: grey;
+        }
+
+        .text-black {
+            font-weight: lighter;
+            font: 20px;
+        }
+    }
+
+    .blog-section {
+
+        .text-center {
+            @extend .text-center-one;
+
+            h2 {
+                --font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+                box-sizing: border-box;
+                margin-top: 0;
+                line-height: 1.2;
+                font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                margin-bottom: 1rem !important;
+                color: #000;
+                font-weight: 900;
+                font-size: 30px;
+            }
+
+        }
+
+        .blog {
+            display: flex;
+            padding-left: 70px;
+
+            .blog-1 {
+                .h-entry {
+
+                    text-align: left;
+                    width: 80%;
+                    word-spacing: 1px;
+
+                    h2 {
+
+                        font-size: 21px;
+                        text-decoration: none;
+                        font-weight: lighter;
+                    }
+
+                    p {
+                        color: grey;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+
+                    div {
+                        color: grey;
+
+                    }
+
+                    a {
+                        color: orangered;
+                        font-size: 16px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+.contact-section {
+    background-color: rgba(167, 165, 165, 0.1);
+
+    .text-center {
+        padding-top: 90px;
+        padding-bottom: 20px;
+        @extend .text-center-one;
+        font-size: smaller;
+
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+
+        h2 {
+            padding-top: 10px;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+
+    .justify-content-center {
+        --font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        text-align: left;
+        line-height: 1.7;
+        font-weight: 400;
+        font-size: 1rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        -webkit-box-pack: center !important;
+        justify-content: center !important;
+    }
+
+    form {
+
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        text-align: left;
+        line-height: 1.7;
+        font-weight: 400;
+        font-size: 1rem;
+        background-color: #fff !important;
+        padding: 50px;
+        margin-bottom: 50px;
+
+        .form-group {
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .mb-3 {
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+
+            #name {
+                height: 200px;
+                padding-left: 20px;
+            }
+        }
+
+        .submit-b {
+            @include buton;
+            padding: 15px;
+        }
+    }
+}
+
+.site-footer {
+    font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.7;
+    font-weight: 400;
+    font-size: 1rem;
+    padding-top: 80px;
+    display: flex;
+
+    .end {
+        display: flex;
+        justify-content: center;
+        padding-left: 100px;
+    }
+
+    .final-part-one {
+        width: 40%;
+        text-align: left;
+        line-height: 1.7;
+
+        p {
+            color: grey;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        a {
+            text-decoration: none;
+            color: grey;
+            word-spacing: 2px;
+
+            &:hover {
+                color: #000;
+            }
+
+            i {
+                font-size: larger;
+            }
+
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+    }
+
+    .final-img {
+        width: 250px;
+    }
+
+    .final-b {
+        @include buton;
+    }
+}
